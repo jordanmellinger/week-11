@@ -51,6 +51,10 @@ function updateLists() {
     aElement.classList.add("list-group-item");
     aElement.classList.add("list-group");
     aElement.classList.add("list-group-item-action");
+    
+    if (index == selectedList) {
+      aElement.classList.add("active");
+    }
 
 
     aElement.setAttribute("data-index", index);
