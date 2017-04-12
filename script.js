@@ -13,6 +13,13 @@ var listArray = [
       "Legion",
       "House of Cards"
     ]
+  },
+    { name: "Games to Play",
+    items: [
+      "Breath of the Wild",
+      "Animal Crossing New Leaf",
+      "Pokemon Moon"
+    ]
   }
 ];
 
@@ -22,6 +29,15 @@ var listDiv = document.getElementById("lists");
 var itemDiv = document.getElementById("list-items");
 var addListButton = document.getElementById("add-list-button");
 var addItemButton = document.getElementById("add-item-button");
+
+
+listDiv.addEventListener("click", function (e) {
+  var targetElement = e.target;
+  console.log(targetElement.dataset.index)
+  selectedList = targetElement.dataset.index;
+  updateLists();
+  updateItemsForSelectedList();
+});
 
 // FUNCTIONS TO UPDATE THE HTML PAGE WITH RESPECT TO DATA
 
